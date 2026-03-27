@@ -12,6 +12,10 @@ npm start
 
 Abrufbar unter http://localhost:4200/
 
+**Ergebnis:**
+
+<img width="1273" height="487" alt="image" src="https://github.com/user-attachments/assets/7ce3f7cf-cee2-4f55-9059-5d49009cce96" />
+
 ## Weiteres Vorgehen
 
 Leider blieb nicht ausreichend Zeit um die gesamte Logik aus der Aufgabe zu implementieren.
