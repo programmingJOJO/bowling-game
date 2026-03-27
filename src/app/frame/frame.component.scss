@@ -1,0 +1,23 @@
+:host {
+  display: flex;
+
+  .frame {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 1em;
+
+    .rolls {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .result {
+      font-size: 2em;
+    }
+
+    .logging, .result {
+      text-align: center;
+    }
+  }
+}

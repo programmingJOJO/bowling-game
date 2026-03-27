@@ -1,0 +1,29 @@
+<div class="frame">
+  <div class="rolls">
+    <select (change)="selectRoll()" [formField]="$any(rollForm.firstRoll)">
+      @for (option of firstRollOptions; track option.value) {
+        <option [value]="option.value">{{ option.label }}</option>
+      }
+    </select>
+    @if (!isStrike() && rollForm().dirty()) {
+      <select (change)="selectRoll()" [formField]="$any(rollForm.secondRoll)">
+        @for (option of secondRollOptions(); track option.value) {
+          <option [value]="option.value">{{ option.label }}</option>
+        }
+      </select>
+    }
+    @if (isLastFrame() && (isStrike() || isSpare())) {
+      <select (change)="selectRoll()" [formField]="$any(rollForm.thirdRoll)">
+        @for (option of firstRollOptions; track option.value) {
+          <option [value]="option.value">{{ option.label }}</option>
+        }
+      </select>
+    }
+  </div>
+  <div class="result">{{ result() }}</div>
+  @if (loggingService.loggingEnabled()) {
+    <div class="logging">{{ rollForm.firstRoll().value() }} - {{ rollForm.secondRoll().value() }}
+      - {{ rollForm.thirdRoll().value() }}
+    </div>
+  }
+</div>

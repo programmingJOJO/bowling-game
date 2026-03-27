@@ -1,59 +1,25 @@
 # BowlingGame
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.3.
+Das Projekt verwendet [Angular CLI](https://github.com/angular/angular-cli) version 21.2.3.
 
 ## Development server
 
-To start a local development server, run:
+Zum Starten des Projektes:
 
 ```bash
-ng serve
+npm start
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Abrufbar unter http://localhost:4200/
 
-## Code scaffolding
+## Weiteres Vorgehen
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Leider blieb nicht ausreichend Zeit um die gesamte Logik aus der Aufgabe zu implementieren.
+Auch auf das Schreiben der Tests musste ich verzichten. Mit mehr Zeit würde ich folgendermaßen weitermachen:
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+1. Fehlende Logik zu Strikes und Spares ergänzen, bei denen die Punkte des nachfolgenden Frames mitgezählt werden
+2. Vollständige Implementierung des dritten Wurfs im 10. Frame
+2. Erstellung von Tests zu allen public Methoden und Properties
+3. Refactoring der UI hinsichtlich der Kästchen zu Strikes, Spares und der Punkte
+  4. Ggf. Einfügen von Labels oder anderweitiger Anzeige zur besseren Übersichtlichkeit der zwei Würfe
+  5. Einfügen der Punkte in Klammern hinter Strikes und Spares in den Dropdowns
